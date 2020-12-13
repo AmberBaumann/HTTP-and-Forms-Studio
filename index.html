@@ -67,8 +67,7 @@
 
 			searchForm.addEventListener('submit', function (event) {
 				let searchFormInput = document.querySelector('input[name=q]');
-				let confirmSelectedEngine = document.querySelector('input[name=engine]:checked');
-				if (searchFormInput.value === "" || confirmSelectedEngine !== true) {
+				if (searchFormInput.value === "") {
 					alert("All fields are required!");
 					event.preventDefault();
 				};
