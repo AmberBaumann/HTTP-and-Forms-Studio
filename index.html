@@ -67,19 +67,10 @@
 
 			searchForm.addEventListener('submit', function (event) {
 				let searchFormInput = document.querySelector('input[name=q]');
-				if (searchFormInput.value === "" || checkedSelectedEngine === false) {
+				if (searchFormInput.value === "") {
 					alert("All fields are required!");
 					event.preventDefault();
 				};
-				//THIS IS WRONG - FIGURE OUT HOW TO VALIDATE RADIO BUTTONS CHECKED
-				let checkedSelectedEngine = document.querySelector('input[name=engine]:checked');
-				let i = 0;
-				for (i = 0; i < checkedSelectedEngine.length; i++) {
-					if (checkedSelectedEngine[i].checked !== true) {
-						alert("All fields required!");
-						event.preventDefault();
-					};
-				}
 			});
 		});
 	</script>
@@ -90,26 +81,24 @@
 	<form id="searchForm">
 		<!-- TODO: add form elements -->
 		<input type="text" name="q" id="searchFormBox" />
-		<label for="google" id="google">
-			<input type="radio" name="engine" value="google" />
+		<label for="google">
+			<input id="google" type="radio" name="engine" value="google" />
 			Google</label>
 
-		<label for="duckduckgo" id="duckduckgo">
-			<input type="radio" name="engine" value="duckduckGo" />
-			DuckDuckGo
-		</label>
+		<label for="duckduckgo">
+			<input id="duckduckgo" type="radio" name="engine"
+				value="duckduckGo" />
+			DuckDuckGo</label>
 
-		<label for="bing" id="bing">
-			<input type="radio" name="engine" value="bing" />
-			Bing
-		</label>
+		<label for="bing">
+			<input id="bing" type="radio" name="engine" value="bing" />
+			Bing</label>
 
-		<label for="ask" id="ask">
-			<input type="radio" name="engine" value="ask" />
-			Ask
-		</label>
+		<label for="ask">
+			<input id="ask" type="radio" name="engine" value="ask" />
+			Ask</label>
 
-		<input type="submit" value="Go!" id="goButton" />
+		<input id="goButton" type="submit" value="Go!" />
 	</form>
 
 </body>
