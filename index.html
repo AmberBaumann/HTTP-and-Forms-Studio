@@ -2,6 +2,52 @@
 
 <head>
 	<meta charset="utf-8">
+	<title>Your Curiosity Playground</title>
+	<h1>Your Curiosity Playground</h1>
+	<style>
+		body {
+			background-color: lavender;
+			text-align: center;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		h1 {
+			color: black;
+			font-family: Garamond, serif;
+		}
+
+		#searchFormBox {
+			border-radius: 25px;
+		}
+
+		#goButton {
+			background-color: lightpink;
+			font-weight: bold;
+		}
+
+		#google {
+			color: blue;
+			font-weight: bold;
+		}
+
+		#duckduckgo {
+			color: orange;
+			font-weight: bold;
+		}
+
+		#bing {
+			color: green;
+			font-weight: bold;
+		}
+
+		#ask {
+			color: red;
+			font-weight: bold;
+		}
+	</style>
 	<script>
 		// TODO: create a handler
 		window.addEventListener("load", function () {
@@ -35,27 +81,27 @@
 
 	<form id="searchForm">
 		<!-- TODO: add form elements -->
-		<input type="text" name="q" />
-		<label for="google">
+		<input type="text" name="q" id="searchFormBox" />
+		<label for="google" id="google">
 			<input type="radio" name="engine" value="google" />
 			Google</label>
 
-		<label for="duckduckgo">
+		<label for="duckduckgo" id="duckduckgo">
 			<input type="radio" name="engine" value="duckduckGo" />
 			DuckDuckGo
 		</label>
 
-		<label for="bing">
+		<label for="bing" id="bing">
 			<input type="radio" name="engine" value="bing" />
 			Bing
 		</label>
 
-		<label for="ask">
+		<label for="ask" id="ask">
 			<input type="radio" name="engine" value="ask" />
 			Ask
 		</label>
 
-		<input type="submit" value="Go!" />
+		<input type="submit" value="Go!" id="goButton" />
 	</form>
 
 </body>
