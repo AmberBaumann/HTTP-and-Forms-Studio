@@ -19,7 +19,14 @@
 				searchForm.setAttribute('action', action);
 			});
 
-
+			searchForm.addEventListener('submit', function (event) {
+				let searchFormInput = document.querySelector('input[name=q]');
+				let confirmSelectedEngine = document.querySelector('input[name=engine]:checked');
+				if (searchFormInput.value === "" || confirmSelectedEngine !== true) {
+					alert("All fields are required!");
+					event.preventDefault();
+				};
+			});
 		});
 	</script>
 </head>
